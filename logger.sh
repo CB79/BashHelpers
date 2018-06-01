@@ -21,7 +21,7 @@ LOGLEVEL=${LOGLEVEL:-3}
 QUIET=${QUIET:-false}		     # enable/disable logging to stdout
 TRACE_SHOW_STACK=${TRACE_SHOW_STACK:-on}
 
-DATE_FORMAT=${DATE_FORMAT:-'%F %T'}
+DATE_FORMAT="${DATE_FORMAT:-%F %T}"
 
 function increaseLoglevel() {
 	[ $LOGLEVEL -lt $(expr ${#LOGLEVELS[@]} - 1 ) ] && let LOGLEVEL++
